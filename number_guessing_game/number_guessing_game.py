@@ -3,7 +3,6 @@ import random
 def guess_number(upper_bound):
     random_number = random.randint(1, upper_bound)
     attempts = 0
-
     while True:
         try:
             user_guess = int(input(f"Enter your guess: "))
@@ -12,9 +11,7 @@ def guess_number(upper_bound):
         except ValueError as e:
             print(f"Invalid input: {e}")
             continue
-
         attempts += 1
-
         if user_guess == random_number:
             print(f"Congratulations! You guessed correctly within {attempts} attempts.")
             break
