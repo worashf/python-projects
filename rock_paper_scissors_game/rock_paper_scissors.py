@@ -11,7 +11,7 @@ def get_choice():
 def who_win(playyer, opponent):
     if playyer == opponent:
         return "It's a tie!"
-    elif (playyer == "rock" and opponent == 'scissors')  or  (playyer == 'scissors'  and opponent == 'scissors') or (playyer == 'paper' and  opponent == 'rock'):
+    elif (playyer == "rock" and opponent == 'scissors')  or  (playyer == 'scissors'  and opponent == 'paper') or (playyer == 'paper' and  opponent == 'rock'):
         return "Congratulations! You win!"
     else: 
         return "Computer wins!"
