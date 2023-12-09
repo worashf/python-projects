@@ -85,7 +85,7 @@ class LinkedList:
         return  new_node
 
 
-    # remove the list from  the first node
+    # remove the first node  from  the list
     def  remove_first(self):
         if self.head  is None and self.length  == 0: # if the list is empty
              return  "The list is empty, can't remove."
@@ -136,10 +136,9 @@ class LinkedList:
                    self.length += 1
                return  inserted_node
                    
-    
-
         except  IndexError as err:
             return err
+        
      #  update the value of the node at specific index list. => update_at_index
     def update_at_index(self,index, value):
         try: 
@@ -157,7 +156,7 @@ class LinkedList:
 
 
     # remove node from specific index
-    def remove(self, index):
+    def remove_at_index(self, index):
         if index < 0 or index >= self.length or self.length == 0:
             return False
         elif index == 0:
@@ -173,6 +172,7 @@ class LinkedList:
             temp = None
             self.length -= 1
             return True
+        
     # reverse list =>  reverse
     def reverse(self):
         if self.length == 0 or self.length == 1:
